@@ -1,0 +1,26 @@
+{
+  "name": "solidity-nublet",
+  "version": "1.0.0",
+  "description": "node modules for smart contract development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d1joseph/solidity-nublet.git"
+  },
+  "keywords": [
+    "smart",
+    "contract"
+  ],
+  "author": "Dhiv Joseph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d1joseph/solidity-nublet/issues"
+  },
+  "homepage": "https://github.com/d1joseph/solidity-nublet#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.1.0"
+  }
+}
