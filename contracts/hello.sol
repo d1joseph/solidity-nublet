@@ -27,7 +27,7 @@ contract HelloWorld {
     // exposes a state variable
     function leaveReply(string memory _your_reply_msg) public {
         
-        // accessing and changing state
+        // accessing and changing contract state
         latestReply = _your_reply_msg;
     }
 
