@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: GPL-3.0;
 pragma solidity ^0.8.4;
 
-// @title Cryptozombies code snippets
+// @title Cryptozombies tutorial code
 // @author Dhiv Joseph
 /* Contract description - a some code snippets with slight refactoring from the cyrptozombies solidity tutorial game.
 
@@ -25,9 +25,18 @@ contract ZombieFactory {
 
     Zombie[] public zombies; // a dynamic array
 
+    // zombie ownership and count 
+    mapping (uint => address) public zombieToOwner;
+    mapping (address => uint) ownerZombieCount;
+
     function _createZombies(string memory _name, uint _dna) private {
         // combining structs and arrays to make zombies. Pushing to our zombie list
         uint id = zombies.push(Zombie(_name, _dna)) - 1;
+
+        // assigning ownership and increment counter
+        zombieToOwner[id] = msg.sender;
+        ownerZombieCount[msg.sender]++;
+
         emit NewZombie(id, _name, _dna);
     }
 
@@ -39,6 +48,8 @@ contract ZombieFactory {
 
     // create zombie - exposed for users to call and make a zombie!
     function createZombies(string memory _name) public {
+        // limit zombie creation to one per account.
+        require(ownerZombieCount[msg.sender] == 0);
         uint randDna = _generateRandomDna(_name);
         _createZombies(_name, randDna);
     }
