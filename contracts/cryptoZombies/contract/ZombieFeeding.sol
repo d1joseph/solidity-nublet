@@ -10,5 +10,5 @@ Visit cryptozombies: https://cryptozombies.io/ to learn Solidity. I highly recom
 import './ZombieFactory.sol';
 
 contract ZombieFeeding is ZombieFactory {
-    
+       
 }

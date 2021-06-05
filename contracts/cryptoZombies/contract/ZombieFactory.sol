@@ -17,7 +17,6 @@ contract ZombieFactory {
     uint dnaModulus = 10 ** dnaDigits;
 
     // a common type in Solidity. Comes with a built-in constructor
-
     struct Zombie {
         string name;
         uint dna;
