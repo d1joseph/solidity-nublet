@@ -5,7 +5,8 @@ pragma solidity ^0.8.4;
 // @author Dhiv Joseph
 /* Contract description - a some code snippets with slight refactoring from the cyrptozombies solidity tutorial game.
 
-Visit cryptozombies: https://cryptozombies.io/ to learn Solidity. I highly recommend it.
+Visit cryptozombies: https://cryptozombies.io/ to learn Solidity. I really enjoyed the tutorial and highly recommend completing this if you're
+just starting with solidity.
 */
 
 contract ZombieFactory {
@@ -24,7 +25,7 @@ contract ZombieFactory {
 
     Zombie[] public zombies; // a dynamic array
 
-    // zombie ownership and count 
+    // zombie ownership and allocation count 
     mapping (uint => address) public zombieToOwner;
     mapping (address => uint) ownerZombieCount;
 
