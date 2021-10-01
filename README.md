@@ -1,4 +1,5 @@
 # solidity-nublet
-Tiny smart contract examples
+Solidity smart contract examples and code snippets
 
-Examples are categorised by context.
+This project is a learning exercise to help me understand smart contract development and
+the programming with Solidity.
